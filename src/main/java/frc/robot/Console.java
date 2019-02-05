@@ -26,10 +26,9 @@ public class Console {
     private ShuffleboardTab subsystemsTab;
     private ShuffleboardTab debugTab;
 
-    // Updatable entries
+    // Updatable entries, either by user or under program control
     private NetworkTableEntry driver_matchTime;
     private NetworkTableEntry drive_targetDistanceEntry;
-
 
     public Console() {
         System.out.println("Console constructor");

@@ -21,8 +21,6 @@ public class Robot extends TimedRobot {
   public static ClimbSubsystem climbSubsystem = new ClimbSubsystem();
   private  ClimbCommand m_climbCommand = new ClimbCommand();
   public static DriveSubsystem driveSubsystem = new DriveSubsystem();
-
-  // Set up the console last
   public static Console console = new Console();      
 
   /**

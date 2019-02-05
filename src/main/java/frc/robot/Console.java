@@ -15,9 +15,14 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 import java.util.Map;
 
-/**
- * Add your docs here.
- */
+// Class that wrappers all of the interaction with the Shuffleboard
+
+// All decisions about content and layout of the Shuffleboard are consolidated in this file
+// to make it easier to change things rather than having to look throughout all of the 
+// classes for subsystems, commands, etc.
+
+// The Console class knows about the subsystems, commands, etc.  but generally not vice versa
+
 public class Console {
 
     // Tabs
@@ -31,7 +36,7 @@ public class Console {
     private NetworkTableEntry drive_targetDistanceEntry;
 
     public Console() {
-        Logging.logTrivial("Console constructor");
+
     }
 
     public void initialize() {

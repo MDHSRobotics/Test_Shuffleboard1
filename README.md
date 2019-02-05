@@ -8,3 +8,4 @@ This program illustrates the various capabilities of the FRC Shuffleboard dashbo
 ## Known Problem
 * The .withProperties modifier for widgets is not working.  For example, setting the min and max values for a NumberBar is ignored.
 * Displaying the state of the command scheduler is not working. According to the documentation, you just have to add the Scheduler.getInstance to a widget but that is not working. Curiously, it doesn't work for the SmarDashboard either.
+* The layout of the widgets and their properties are cached so it's a bit tedious having to close and re-open the Shuffleboard app whenever you make a change.  There might be a way to clear this at startup to avoid this.

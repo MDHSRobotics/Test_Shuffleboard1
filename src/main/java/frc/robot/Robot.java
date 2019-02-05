@@ -29,8 +29,8 @@ public class Robot extends TimedRobot {
    */
   @Override
   public void robotInit() {
-    Logging.logNormal("Initializing robot")
-    
+    Logging.logNormal("Initializing robot");
+
     autoCommandChooser.setDefaultOption("AutoCommand1", new AutoCommand1());
     autoCommandChooser.addOption("AutoCommand2", new AutoCommand2());
 

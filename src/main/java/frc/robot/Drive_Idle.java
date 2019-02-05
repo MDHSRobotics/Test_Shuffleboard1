@@ -17,7 +17,7 @@ public class Drive_Idle extends Command {
   // Called just before this Command runs the first time
   @Override
   protected void initialize() {
-    System.out.println("Initializing Drive Idle command");
+    Logging.logTrivial("Initializing Drive Idle command");
   }
 
   // Called repeatedly when this Command is scheduled to run
@@ -34,13 +34,13 @@ public class Drive_Idle extends Command {
   // Called once after isFinished returns true
   @Override
   protected void end() {
-    System.out.println("Ending Drive Idle command");
+    Logging.logTrivial("Ending Drive Idle command");
   }
 
   // Called when another command which requires one or more of the same
   // subsystems is scheduled to run
   @Override
   protected void interrupted() {
-    System.out.println("Interrupting Drive Idle command");
+    Logging.logTrivial("Interrupting Drive Idle command");
   }
 }

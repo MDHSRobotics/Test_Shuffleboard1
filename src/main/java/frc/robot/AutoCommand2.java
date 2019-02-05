@@ -22,7 +22,7 @@ public class AutoCommand2 extends Command {
   // Called just before this Command runs the first time
   @Override
   protected void initialize() {
-    System.out.println("Initializing Auto Command 2");
+    Logging.logTrivial("Initializing Auto Command 2");
     m_counter = 0;
     m_printNum = 0;
   }
@@ -34,7 +34,7 @@ public class AutoCommand2 extends Command {
     if (m_counter > 50) {
       m_counter = 0;
       ++m_printNum;
-      System.out.println("Executing AutoCommand2 " + m_printNum);
+      Logging.logTrivial("Executing AutoCommand2 " + m_printNum);
     }
   }
 
@@ -47,13 +47,13 @@ public class AutoCommand2 extends Command {
   // Called once after isFinished returns true
   @Override
   protected void end() {
-    System.out.println("Ending Auto Command 2");
+    Logging.logTrivial("Ending Auto Command 2");
   }
 
   // Called when another command which requires one or more of the same
   // subsystems is scheduled to run
   @Override
   protected void interrupted() {
-    System.out.println("Interrupting Auto Command 2");
+    Logging.logTrivial("Interrupting Auto Command 2");
   }
 }

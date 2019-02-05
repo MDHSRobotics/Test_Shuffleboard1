@@ -19,7 +19,7 @@ public class Climb_Idle extends Command {
   // Called just before this Command runs the first time
   @Override
   protected void initialize() {
-    System.out.println("Initializing Climb Idle command");
+    Logging.logTrivial("Initializing Climb Idle command");
   }
 
   // Called repeatedly when this Command is scheduled to run
@@ -36,13 +36,13 @@ public class Climb_Idle extends Command {
   // Called once after isFinished returns true
   @Override
   protected void end() {
-    System.out.println("Ending Climb Idle command");
+    Logging.logTrivial("Ending Climb Idle command");
   }
 
   // Called when another command which requires one or more of the same
   // subsystems is scheduled to run
   @Override
   protected void interrupted() {
-    System.out.println("Interrupting Climb Idle command");
+    Logging.logTrivial("Interrupting Climb Idle command");
   }
 }

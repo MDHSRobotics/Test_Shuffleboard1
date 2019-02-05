@@ -29,6 +29,8 @@ public class Robot extends TimedRobot {
    */
   @Override
   public void robotInit() {
+    Logging.logNormal("Initializing robot")
+    
     autoCommandChooser.setDefaultOption("AutoCommand1", new AutoCommand1());
     autoCommandChooser.addOption("AutoCommand2", new AutoCommand2());
 
@@ -62,7 +64,7 @@ public class Robot extends TimedRobot {
 
     if (m_autoCommand != null)  {
       m_autoCommand.start();
-      System.out.println("Starting " + m_autoCommand.getName());
+      Logging.logNormal("Starting " + m_autoCommand.getName());
     }
   }
 
@@ -76,7 +78,7 @@ public class Robot extends TimedRobot {
 
   @Override
   public void teleopInit() {
-      System.out.println("Initializing Teleop...");
+      Logging.logNormal("Initializing Teleop...");
 
       // This makes sure that the autonomous stops running when
       // teleop starts running. If you want the autonomous to
@@ -112,7 +114,7 @@ public class Robot extends TimedRobot {
      */
     @Override
     public void disabledInit() {
-        System.out.println("Disabling Robot...");
+        Logging.logNormal("Disabling Robot...");
     }
 
     @Override

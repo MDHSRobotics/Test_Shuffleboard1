@@ -23,7 +23,7 @@ public class ClimbCommand extends Command {
   // Called just before this Command runs the first time
   @Override
   protected void initialize() {
-    System.out.println("Initializing climb command");
+    Logging.logTrivial("Initializing climb command");
 
     m_timer.reset();
     m_timer.start();
@@ -45,13 +45,13 @@ public class ClimbCommand extends Command {
   // Called once after isFinished returns true
   @Override
   protected void end() {
-    System.out.println("Ending climb command");
+    Logging.logTrivial("Ending climb command");
   }
 
   // Called when another command which requires one or more of the same
   // subsystems is scheduled to run
   @Override
   protected void interrupted() {
-    System.out.println("Interrupting climb command");
+    Logging.logTrivial("Interrupting climb command");
   }
 }

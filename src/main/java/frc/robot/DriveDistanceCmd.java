@@ -28,7 +28,7 @@ public class DriveDistanceCmd extends Command {
     // Get the target distance from the console
     m_targetDistance = Robot.console.getTargetDriveDistance();
 
-    System.out.println("Initializing Drive Distance command, with target of " + m_targetDistance + " feet");
+    Logging.logTrivial("Initializing Drive Distance command, with target of " + m_targetDistance + " feet");
 
     if (m_targetDistance < 0.) {
       m_direction = -1.0;
@@ -58,14 +58,14 @@ public class DriveDistanceCmd extends Command {
   @Override
   protected void end() {
     double distanceTraveled = m_direction * m_targetDistance;
-    System.out.println("Drove " + distanceTraveled + " feet");
-    System.out.println("Ending Drive Distance command");
+    Logging.logTrivial("Drove " + distanceTraveled + " feet");
+    Logging.logTrivial("Ending Drive Distance command");
   }
 
   // Called when another command which requires one or more of the same
   // subsystems is scheduled to run
   @Override
   protected void interrupted() {
-    System.out.println("Interrupting Drive Distance command");
+    Logging.logTrivial("Interrupting Drive Distance command");
   }
 }

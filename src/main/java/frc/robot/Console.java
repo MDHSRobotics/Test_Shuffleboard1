@@ -31,11 +31,11 @@ public class Console {
     private NetworkTableEntry drive_targetDistanceEntry;
 
     public Console() {
-        System.out.println("Console constructor");
+        Logging.logTrivial("Console constructor");
     }
 
     public void initialize() {
-        System.out.println("Initializing console...");
+        Logging.logTrivial("Initializing console...");
 
         setupSmartdashboard();
 
